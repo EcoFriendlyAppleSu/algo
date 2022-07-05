@@ -1,0 +1,19 @@
+# 타겟 넘버
+
+def recursive(numbers, sum, target):
+    if numbers == []:
+        if sum == target:
+            return 1
+        else:
+            return 0
+    return recursive(numbers[1:], sum + numbers[0], target) + recursive(numbers[1:], sum - numbers[0], target)
+
+def solution(numbers, target):
+    return recursive(numbers, 0, target)
+
+
+if __name__ == '__main__':
+    numbers = [1,1,1,1,1]
+    target = 3
+    print(solution(numbers, target))
+
