@@ -1,6 +1,6 @@
 # 메뉴 리뉴얼
-from itertools import combinations
-from collections import Counter
+from itertools import combinations # 난수 생성
+from collections import Counter #
 
 def solution(orders, course):
     answer = []
@@ -20,7 +20,6 @@ def solution(orders, course):
                         answer.append("".join(key))
 
     return sorted(answer)
-
 
 if __name__ == '__main__':
     orders = ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"]
