@@ -21,6 +21,21 @@ def solution(orders, course):
 
     return sorted(answer)
 
+def solutionAfterPractice(orders, course):
+    answer = []
+
+    for cuisineAmount in course: # 2, 3, 4
+        ary = []
+        for order in orders:
+            order = sorted(order)
+            ary.extend(combinations(order, cuisineAmount))
+        count = Counter(ary)
+        if count != 0:
+            if max(count.values()) >= 2:
+                for key, value in count.items():
+                    answer.append("".join(key))
+    return answer
+
 if __name__ == '__main__':
     orders = ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"]
     course = [2,3,4]

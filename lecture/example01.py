@@ -16,5 +16,6 @@ def solutionMorePythonable(mylist):
 # sequence : int type index를 통해 원소에 접근할 수 있는 iteralbe
 if __name__ == '__main__':
     input = [[1, 2], [3, 4], [5]]
+    print(*input)
     print(solution(input))
     print(solutionMorePythonable(input))

@@ -26,5 +26,5 @@ def solutionNotUsingPythonAPI(arr):
 
 if __name__ == '__main__':
     mylist = [2,1]
-    # print(solution(mylist))
-    print(solutionNotUsingPythonAPI(mylist))
+    print(solution(mylist))
+    # print(solutionNotUsingPythonAPI(mylist))
