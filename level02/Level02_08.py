@@ -11,7 +11,7 @@ def divide(strings):
         else:
             closeBracket += 1
         if openBracket == closeBracket:
-            return strings[:i + 1], strings[i+1:]
+            return strings[:i + 1], strings[i+1:] # return 2개 가능
 
 # 문자열 u가 올바른 괄호 문자열인지 확인하는 함수
 def check(strings):
