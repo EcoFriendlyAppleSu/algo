@@ -4,6 +4,7 @@
 def solution(s):
     sortedTuple = sorted([s.split(',') for s in s[2:-2].split('},{')], key=len)
     result = []
+    print(sortedTuple)
 
     for eachTuple in sortedTuple:
         for index in eachTuple:
