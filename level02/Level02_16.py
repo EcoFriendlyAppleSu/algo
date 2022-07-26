@@ -1,12 +1,20 @@
-# Joy Stick
+# Joy Stick // greedy
+import string
 
 def solution(name):
+    index = 0
+    answer = 0
+    strAscii = string.ascii_uppercase
+    print(strAscii)
 
     name = list(name)
-    print(name)
-    answer = 0
+
+    for i in name:
+        print(strAscii.index(i))
+
+
     return answer
 
 if __name__ == '__main__':
-    name = "JEROEN"
+    name = "JAN"
     print(solution(name))
