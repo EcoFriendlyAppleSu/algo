@@ -1,4 +1,5 @@
 # 순위 검색
+# 해당 문제는 더 생각이 필요하다.
 from itertools import combinations
 from collections import defaultdict
 from bisect import bisect_left
