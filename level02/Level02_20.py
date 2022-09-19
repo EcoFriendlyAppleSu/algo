@@ -29,6 +29,7 @@ def findCandidate(superKeys):
     candidateKeys = []
     cSize = len(superKeys)
     for i, sk in enumerate(superKeys):
+        print("findCandidate is ", i, sk)
         if sk is False:
             continue
         candidateKeys.append(sk)
