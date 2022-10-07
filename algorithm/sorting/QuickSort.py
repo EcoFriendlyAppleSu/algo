@@ -23,5 +23,6 @@ def quickSort(array, start, end):
     quickSort(array, start, right-1)
     quickSort(array,right+1, end)
 
+# 첫 시작은 양 끝단입니다.
 quickSort(array,0,len(array)-1)
 print(array)
