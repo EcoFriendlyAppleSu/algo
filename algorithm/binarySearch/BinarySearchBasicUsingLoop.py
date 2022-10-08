@@ -25,3 +25,7 @@ if result == None:
     print("원소가 존재하지 않습니다.")
 else:
     print(result+1)
+
+# input values
+# 10 7
+# 1 3 5 7 9 11 13 15 17 19
