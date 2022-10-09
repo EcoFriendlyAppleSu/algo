@@ -1,4 +1,5 @@
 # 떡볶이 떡 만들기
+# 손님이 원하는 값보다 조금 잘라줘야 합니다.
 
 N, M = map(int, input().split())
 array = list(map(int, input().split()))
