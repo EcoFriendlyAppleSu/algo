@@ -1,34 +1,35 @@
 # 플로이드 워셜 알고리즘 최단거리
+# 모든 지점에서 다른 모든 지점까지의 최단 경로를 모두 구해야 하는 경우
 
 INF = int(1e9)
 
 node = int(input())
 edge = int(input())
 
-graph = [[INF] * (node + 1) for _ in range(node +1)]
+graph = [[INF] * (node + 1) for _ in range(node + 1)]
 
 # 초기값 세팅
-for a in range(1, node +1):
+for a in range(1, node + 1):
     for b in range(1, node + 1):
         if a == b:
             graph[a][b] = 0
 
 # 각 노드 가중치 입력
 for _ in range(edge):
-    a,b,c = map(int, input().split())
+    a, b, c = map(int, input().split())
     graph[a][b] = c
 
 for k in range(1, node + 1):
     for a in range(1, node + 1):
         for b in range(1, node + 1):
-            graph[a][b] = min(graph[a][b], graph[a][k]+graph[k][b])
+            graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])
 
 for a in range(1, node + 1):
     for b in range(1, node + 1):
         if graph[a][b] == INF:
-            print("INFINITY", end= ' ')
+            print("INFINITY", end=' ')
         else:
-            print(graph[a][b], end= ' ')
+            print(graph[a][b], end=' ')
     print()
 # 4
 # 7
