@@ -7,7 +7,7 @@ heapq.heappush(heap, 4)
 heapq.heappush(heap, 1)
 heapq.heappush(heap, 7)
 heapq.heappush(heap, 0)
-print(heap)
+print(heap) # 기본적으로 오름차순으로 설정
 
 # heap 원소 삭제, 얻기
 print(heapq.heappop(heap))
