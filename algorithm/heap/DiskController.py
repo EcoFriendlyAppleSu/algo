@@ -10,7 +10,7 @@ def solution(jobs):
     while len(jobs) > i:
         for job in jobs:
             if start < job[0] <= end:
-                heapq.heappush(queue, (job[1], job[0]))
+                heapq.heappush(queue, (job[1], job[0])) # 오름차순으로 정렬됩니다.
         if len(queue) > 0:
             now = heapq.heappop(queue)
             start = end
@@ -19,7 +19,7 @@ def solution(jobs):
             i += 1
         else:
             end += 1
-    resu
+    return answer
 
 if __name__ == '__main__':
     jobs = [[0, 3], [1, 9], [2, 6]]

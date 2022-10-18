@@ -1,4 +1,4 @@
-# 최단 경로를 구하는 방식 다익스트라
+# 최단 경로를 구하는 방식 다익스트라, 특정 노드에서 시작해 각 노드마다 최단 거리 저장
 import sys
 input = sys.stdin.readline # input() method 보다 더 빠른 방법
 INF = int(1e9) # python에서 무한값을 입력하는 방법
