@@ -1,25 +1,29 @@
-# BFS 기본 문제
+'''
+BFS 기본 문제
+BFS는 queue를 사용합니다.
+'''
 from collections import deque
+
 graph = [
     [],
-    [2,3,8],
-    [1,7],
-    [1,4,5],
-    [3,5],
-    [3,4],
+    [2, 3, 8],
+    [1, 7],
+    [1, 4, 5],
+    [3, 5],
+    [3, 4],
     [7],
-    [2,6,8],
-    [1,7]
+    [2, 6, 8],
+    [1, 7]
 ]
 
 visited = [False] * 9
+
 
 def bfs(graph, start, visited):
     # 큐를 생성하고 첫번째 원소를 넣는다
     queue = deque([start])
     # 방문 처리해주고
     visited[start] = True
-
 
     # queue가 빌 때까지 반복한다.
     while queue:
