@@ -1,0 +1,23 @@
+'''
+문제 : 택배 상자
+'''
+
+def solution(order):
+
+    stack = []
+    i = 1
+    now = 0
+
+    while i != len(order) + 1:
+        stack.append(i)
+        while stack[-1] == order[now]:
+            now += 1
+            stack.pop()
+
+            if len(stack) == 0:
+                break
+        i += 1
+    return now
+
+order = [4,3,1,2,5]
+print(solution(order))
