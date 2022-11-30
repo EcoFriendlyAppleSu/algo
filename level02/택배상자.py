@@ -1,5 +1,6 @@
 '''
 문제 : 택배 상자
+while 반복문을 바라볼 때 while 안에 있는 조건식이 if라는 것을 잊지 말자
 '''
 
 def solution(order):
