@@ -26,3 +26,5 @@ if __name__ == '__main__':
 #     copy replacement            # max time O((n/m1) * m2) + O(n)
 # copy rest of the string         # max time O(n)
 # 시간 복잡도 : O(n * (1 + m2/m1))
+# 시간 복잡도에 대한 설명
+# https://stackoverflow.com/questions/66163149/does-str-replace-have-a-time-complexity-on2
