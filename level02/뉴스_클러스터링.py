@@ -27,7 +27,8 @@ def solution(str1, str2):
     str1Ary = getTwoLengthSizeAry(str1)
     str2Ary = getTwoLengthSizeAry(str2)
 
-    print("집합 = ", str1Ary, str2Ary)
+    print("집합 A = ", str1Ary)
+    print("집합 B = ", str2Ary)
 
     # 1000
     setStr1 = set(str1Ary)
@@ -68,10 +69,10 @@ def solution(str1, str2):
     except ZeroDivisionError:
         answer = 1
 
-    print("hfklsdjflasdkj = ", int(3.6))
+
     return math.trunc(answer * 65536)
 
 # print(solution("E=M*C^2", "e=m*c^2"))
-solution("FRANCE", "french")
-# solution("aa1+aa2", "AAAA12")
+# solution("FRANCE", "french")
+solution("aa1+aa2", "AAAA12")
 # solution({1,1,2,2,3},  {1, 2, 2, 4, 5})
