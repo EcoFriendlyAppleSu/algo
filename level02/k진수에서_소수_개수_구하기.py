@@ -5,7 +5,7 @@ def makeNumberToJinsu(n, k):
     if k == 10:
         return str(n)
 
-    # O(1) = 333333
+    # log(1,000,000)
     while n != 0:
         jinsu.append(n%k)
         n //= k
@@ -14,7 +14,7 @@ def makeNumberToJinsu(n, k):
     return "".join(jinsu)
 
 def isPrime(number):
-    # O(1) = 577
+    # O(1,000,000^(1/2))
     for i in range(2, int(math.sqrt(number)) + 1):
         if number % i == 0:
             return False # not prime number
@@ -28,7 +28,7 @@ def judgeNumberIsPrime(jinsu):
     jinsu = list(map(int, jinsu))
     print("prime jinsu = ", jinsu)
 
-    # O(n) = 333333
+    # O(1) = 13
     for i in jinsu:
         if i == 1:
             continue
@@ -45,7 +45,7 @@ def judgeProblemPrimeNumber(givenNumber, primeNumbers):
     print("givenNumber = ", givenNumber)
     print("primeNumbers = ", primeNumbers)
 
-    # O(n) = 101
+    # O(1) = 13
     for element in primeNumbers:
         if "0" + element + "0" in givenNumber:
             result.append(element)
