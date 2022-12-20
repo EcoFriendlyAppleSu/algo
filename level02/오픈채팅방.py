@@ -7,13 +7,16 @@ def solution(record):
         eachIndex = index.split()
         if len(eachIndex) == 3:
             dic[eachIndex[1]] = eachIndex[2]
+    print(dic)
 
     for sentence in record:
         sentenceSplit = sentence.split()
+        print("sentence = ", sentence)
         if sentenceSplit[0] == "Enter":
             answer.append("{}님이 들어왔습니다.".format(dic[sentenceSplit[1]]))
         elif sentenceSplit[0] == "Leave":
             answer.append("{}님이 나갔습니다.".format(dic[sentenceSplit[1]]))
+        print("answer = ", answer)
 
     return answer
 
