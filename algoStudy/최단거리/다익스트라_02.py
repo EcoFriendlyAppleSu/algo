@@ -4,32 +4,33 @@
 
 import heapq
 import sys
+
 input = sys.stdin.readline
 INF = int(1e9)
-
 node, edge = map(int, input().split())
 start = int(input())
-graph = [[] for i in range(node + 1)]
+graph = [[] for _ in range(node + 1)]
 distance = [INF] * (node + 1)
 
 for _ in range(edge):
-    a,b,c = map(int, input().split())
-    graph[a].append((b,c))
+    a, b, c = map(int, input().split())
+    graph[a].append((b,c)) # a 노드에서 시작되어 b 노드로 갈 때, 가중치 c가 들어갑니다.
 
 def dijkstra(start):
     queue = []
-    heapq.heappush(queue, (0, start)) # 거리 0, 노드 start
-    distance[start] = 0
+    heapq.heappush(queue, (0, start)) # queue에 (가중치, 현재 노드)를 넣습니다.
+    distance[start] = 0 # 처음 시작은 0이구요
 
-    while queue:
-        dist, now = heapq.heappop(queue)
+    while queue: # queue가 종료될 때까지
+        currentCost, currentNode = heapq.heappop(queue)
 
-        if distance[now] < dist: # 처리된 노드가 거리가 작을 때 continue
+        # 현재의 가중치보다 기존에 존재한 가중치가 작다면 continue
+        if distance[currentNode] < currentCost:
             continue
+        for i in graph[currentNode]:
+            cost = currentCost + i[1]
 
-        for i in graph[now]:
-            cost = dist + i[1]
-            if cost < distance[i[0]]:
+            if cost < distance[i[0]]: # 만약 현재 위치의 가중치보다 비용이 적게 든다면
                 distance[i[0]] = cost
                 heapq.heappush(queue, (cost, i[0]))
 
@@ -37,7 +38,7 @@ dijkstra(start)
 
 for i in range(1, node + 1):
     if distance[i] == INF:
-        print("infinity")
+        print("INFINITY")
     else:
         print(distance[i])
 
