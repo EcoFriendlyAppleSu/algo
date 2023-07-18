@@ -20,9 +20,16 @@ def quickSort(array, start, end):
             array[right], array[pivot] = array[pivot], array[right]
         else:
             array[left], array[right] = array[right], array[left]
+
     quickSort(array, start, right-1)
     quickSort(array,right+1, end)
 
+print(array)
 # 첫 시작은 양 끝단입니다.
 quickSort(array,0,len(array)-1)
 print(array)
+
+
+
+def quickSortPractice(ary, start, end):
+    return None
